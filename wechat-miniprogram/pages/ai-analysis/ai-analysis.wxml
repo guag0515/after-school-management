@@ -1,0 +1,28 @@
+<view class="container">
+  <view class="header">
+    <text class="title">AI学习分析</text>
+    <picker mode="selector" bindchange="bindPeriodChange" value="{{periodIndex}}" range="{{periods}}">
+      <view class="picker">
+        {{periods[periodIndex]}}
+        <text class="picker-arrow">▼</text>
+      </view>
+    </picker>
+  </view>
+  
+  <view class="content">
+    <view wx:if="{{analysisList.length > 0}}" class="analysis-list">
+      <view wx:for="{{analysisList}}" wx:key="id" class="analysis-item">
+        <view class="item-header">
+          <text class="period">{{item.analysis_period}}</text>
+          <text class="date">{{item.generated_at}}</text>
+        </view>
+        <view class="item-content">
+          <text>{{item.analysis_content}}</text>
+        </view>
+      </view>
+    </view>
+    <view wx:else class="empty">
+      <text>暂无分析记录</text>
+    </view>
+  </view>
+</view>

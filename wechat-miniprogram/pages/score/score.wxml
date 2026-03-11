@@ -1,0 +1,29 @@
+<view class="container">
+  <view class="header">
+    <text class="title">学生成绩</text>
+    <picker mode="month" bindchange="bindMonthChange" value="{{month}}" start="2020-01" end="{{currentMonth}}">
+      <view class="picker">
+        {{month}}
+        <text class="picker-arrow">▼</text>
+      </view>
+    </picker>
+  </view>
+  
+  <view class="content">
+    <view wx:if="{{scoreList.length > 0}}" class="score-list">
+      <view wx:for="{{scoreList}}" wx:key="id" class="score-item">
+        <view class="item-info">
+          <text class="subject">{{item.subject}}</text>
+          <text class="exam-type">{{item.exam_type}}</text>
+        </view>
+        <view class="item-score">
+          <text class="score">{{item.score}}</text>
+        </view>
+        <view class="item-date">{{item.exam_date}}</view>
+      </view>
+    </view>
+    <view wx:else class="empty">
+      <text>暂无成绩记录</text>
+    </view>
+  </view>
+</view>

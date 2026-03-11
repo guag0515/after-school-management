@@ -1,0 +1,13 @@
+<view class="container">
+  <view class="login-form">
+    <view class="form-item">
+      <text class="label">手机号</text>
+      <input type="number" bindinput="bindPhoneInput" placeholder="请输入手机号" value="{{phone}}" />
+    </view>
+    <view class="form-item">
+      <text class="label">密码</text>
+      <input type="password" bindinput="bindPasswordInput" placeholder="请输入密码" value="{{password}}" />
+    </view>
+    <button class="login-btn" bindtap="login">登录</button>
+  </view>
+</view>

@@ -1,0 +1,60 @@
+<view class="container">
+  <view class="header">
+    <text class="title">作业完成情况</text>
+    <picker mode="date" bindchange="bindDateChange" value="{{date}}" start="2020-01-01" end="{{currentDate}}">
+      <view class="picker">
+        {{date}}
+        <text class="picker-arrow">▼</text>
+      </view>
+    </picker>
+  </view>
+  
+  <view class="content">
+    <view wx:if="{{homeworkList.length > 0}}" class="homework-list">
+      <view wx:for="{{homeworkList}}" wx:key="id" class="homework-item">
+        <view class="item-date">{{item.date}}</view>
+        
+        <view class="homework-content">
+          <view class="subject-item">
+            <text class="subject-label">语文:</text>
+            <text class="subject-content">{{item.chinese_homework}}</text>
+          </view>
+          <view class="subject-item">
+            <text class="subject-label">数学:</text>
+            <text class="subject-content">{{item.math_homework}}</text>
+          </view>
+          <view class="subject-item">
+            <text class="subject-label">英语:</text>
+            <text class="subject-content">{{item.english_homework}}</text>
+          </view>
+          <view class="subject-item" wx:if="{{item.science_homework}}">
+            <text class="subject-label">科学:</text>
+            <text class="subject-content">{{item.science_homework}}</text>
+          </view>
+          <view class="subject-item" wx:if="{{item.other_homework}}">
+            <text class="subject-label">其他:</text>
+            <text class="subject-content">{{item.other_homework}}</text>
+          </view>
+        </view>
+        
+        <view class="item-status" wx:if="{{item.completion_status === '已完成'}}">
+          <text class="status-completed">已完成</text>
+        </view>
+        <view class="item-status" wx:elif="{{item.completion_status === '部分完成'}}">
+          <text class="status-partial">部分完成</text>
+        </view>
+        <view class="item-status" wx:else>
+          <text class="status-not-completed">未完成</text>
+        </view>
+        
+        <view class="teacher-evaluation" wx:if="{{item.teacher_evaluation}}">
+          <text class="evaluation-label">教师评价:</text>
+          <text class="evaluation-content">{{item.teacher_evaluation}}</text>
+        </view>
+      </view>
+    </view>
+    <view wx:else class="empty">
+      <text>暂无作业记录</text>
+    </view>
+  </view>
+</view>

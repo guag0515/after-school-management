@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/attendance/attendance",
+    "pages/homework/homework",
+    "pages/evaluation/evaluation",
+    "pages/score/score",
+    "pages/ai-analysis/ai-analysis",
+    "pages/meal/meal"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "课后托管",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/attendance/attendance",
+        "text": "考勤",
+        "iconPath": "",
+        "selectedIconPath": ""
+      },
+      {
+        "pagePath": "pages/homework/homework",
+        "text": "作业",
+        "iconPath": "",
+        "selectedIconPath": ""
+      },
+      {
+        "pagePath": "pages/score/score",
+        "text": "成绩",
+        "iconPath": "",
+        "selectedIconPath": ""
+      },
+      {
+        "pagePath": "pages/ai-analysis/ai-analysis",
+        "text": "AI分析",
+        "iconPath": "",
+        "selectedIconPath": ""
+      },
+      {
+        "pagePath": "pages/meal/meal",
+        "text": "餐饮",
+        "iconPath": "",
+        "selectedIconPath": ""
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

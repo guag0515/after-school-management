@@ -1,0 +1,28 @@
+<view class="container">
+  <view class="header">
+    <text class="title">学生考勤</text>
+    <picker mode="date" bindchange="bindDateChange" value="{{date}}" start="2020-01-01" end="{{currentDate}}">
+      <view class="picker">
+        {{date}}
+        <text class="picker-arrow">▼</text>
+      </view>
+    </picker>
+  </view>
+  
+  <view class="content">
+    <view wx:if="{{attendanceList.length > 0}}" class="attendance-list">
+      <view wx:for="{{attendanceList}}" wx:key="id" class="attendance-item">
+        <view class="item-date">{{item.date}}</view>
+        <view class="item-status" wx:if="{{item.is_present === 1}}">
+          <text class="status-present">已到校</text>
+        </view>
+        <view class="item-status" wx:else>
+          <text class="status-absent">未到校</text>
+        </view>
+      </view>
+    </view>
+    <view wx:else class="empty">
+      <text>暂无考勤记录</text>
+    </view>
+  </view>
+</view>

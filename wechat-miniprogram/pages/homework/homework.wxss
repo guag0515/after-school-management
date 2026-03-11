@@ -1,0 +1,127 @@
+.container {
+  padding: 20rpx;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30rpx;
+  padding: 20rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+}
+
+.title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.picker {
+  display: flex;
+  align-items: center;
+  font-size: 28rpx;
+  color: #666;
+}
+
+.picker-arrow {
+  margin-left: 10rpx;
+  font-size: 24rpx;
+}
+
+.content {
+  background-color: #fff;
+  border-radius: 10rpx;
+  padding: 20rpx;
+}
+
+.homework-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30rpx;
+}
+
+.homework-item {
+  padding: 20rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.item-date {
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20rpx;
+}
+
+.homework-content {
+  margin-bottom: 20rpx;
+}
+
+.subject-item {
+  display: flex;
+  margin-bottom: 15rpx;
+  align-items: flex-start;
+}
+
+.subject-label {
+  font-size: 26rpx;
+  color: #666;
+  width: 80rpx;
+  flex-shrink: 0;
+}
+
+.subject-content {
+  font-size: 26rpx;
+  color: #333;
+  flex: 1;
+  line-height: 1.5;
+}
+
+.item-status {
+  margin-bottom: 20rpx;
+  padding: 8rpx 20rpx;
+  border-radius: 20rpx;
+  inline-size: fit-content;
+}
+
+.status-completed {
+  color: #67C23A;
+}
+
+.status-partial {
+  color: #E6A23C;
+}
+
+.status-not-completed {
+  color: #F56C6C;
+}
+
+.teacher-evaluation {
+  background-color: #f9f9f9;
+  padding: 15rpx;
+  border-radius: 8rpx;
+}
+
+.evaluation-label {
+  font-size: 24rpx;
+  color: #666;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10rpx;
+}
+
+.evaluation-content {
+  font-size: 24rpx;
+  color: #333;
+  line-height: 1.5;
+}
+
+.empty {
+  text-align: center;
+  padding: 100rpx 0;
+  color: #999;
+  font-size: 28rpx;
+}
