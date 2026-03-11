@@ -183,7 +183,8 @@ class AIAnalysisService:
             return result['choices'][0]['message']['content']
         except Exception as e:
             # 模拟AI响应，实际使用时需要移除
-            return f"AI分析报告：\n\n1. 学习总体情况评估：该学生在{prompt.split('分析周期：')[1].split('\n')[0]}的学习情况良好。\n2. 各学科表现分析：各科成绩较为均衡。\n3. 学习态度和习惯分析：作业完成情况良好，考勤率高。\n4. 优缺点分析：优点是学习态度认真，缺点是某些学科需要加强。\n5. 改进建议：建议针对薄弱学科进行专项练习。\n6. 未来学习预测：如果保持当前状态，学习成绩会稳步提升。"
+            period = prompt.split('分析周期：')[1].split('\n')[0]
+            return f"AI分析报告：\n\n1. 学习总体情况评估：该学生在{period}的学习情况良好。\n2. 各学科表现分析：各科成绩较为均衡。\n3. 学习态度和习惯分析：作业完成情况良好，考勤率高。\n4. 优缺点分析：优点是学习态度认真，缺点是某些学科需要加强。\n5. 改进建议：建议针对薄弱学科进行专项练习。\n6. 未来学习预测：如果保持当前状态，学习成绩会稳步提升。"
     
     @staticmethod
     def analyze_student(db: Session, student_id: int, analysis_period: str):
